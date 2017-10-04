@@ -8,11 +8,4 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-<div class="table" *ngIf="selectedHero">
-  <h2 class= "bg-primary">{{selectedHero.name}} details:</h2>
-  <div><label> ID: </label>{{selectedHero.id}}</div>
-  <div>
-    <label> NAME: </label>
-    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-  </div>
-</div>
+<hero-detail [hero]="selectedHero"></hero-detail>
